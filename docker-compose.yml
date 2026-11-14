@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:17
+    container_name: endure-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: endure
+    ports:
+      - "${ENDURE_DB_PORT:-5432}:5432"
+    volumes:
+      - endure-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d endure"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  endure-db-data:

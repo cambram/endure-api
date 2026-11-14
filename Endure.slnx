@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Endure.Api/Endure.Api.csproj" />
+    <Project Path="src/Endure.Application/Endure.Application.csproj" />
+    <Project Path="src/Endure.Domain/Endure.Domain.csproj" />
+    <Project Path="src/Endure.Infrastructure/Endure.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Endure.Tests/Endure.Tests.csproj" />
+  </Folder>
+</Solution>
